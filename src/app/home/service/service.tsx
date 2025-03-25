@@ -1,0 +1,180 @@
+"use client"
+
+import React, { useState } from "react";
+import { Slider } from 'antd';
+import ProductCart from "../assets/product";
+import { Anchor } from 'antd';
+import { Pagination } from 'antd';
+import { DownOutlined, SettingOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Dropdown, Space } from 'antd'
+import Sales from "../assets/sale";
+
+const Service = () => {
+
+    const [disabled, setDisabled] = useState(false);
+
+    const items: MenuProps['items'] = [
+        {
+            key: '1',
+            label: 'My Account',
+            disabled: true,
+        },
+        {
+            type: 'divider',
+        },
+        {
+            key: '2',
+            label: 'Profile',
+            extra: '⌘P',
+        },
+        {
+            key: '3',
+            label: 'Billing',
+            extra: '⌘B',
+        },
+        {
+            key: '4',
+            label: 'Settings',
+            icon: <SettingOutlined />,
+            extra: '⌘S',
+        },
+    ];
+
+    return (
+        <div className="w-full h-[1244px] flex justify-center gap-[50px] mt-[26px]">
+            <div className="w-[310px] h-[774px] flex flex-col justify-start bg-[#fbfbfb]">
+                <h2 className="font-bold text-[18px] text-[#3d3d3d] ml-[20px] mt-[14px]">Categories</h2>
+                <div className="ml-[30px] flex flex-col gap-[14px] mt-[15px]">
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px] font-normal text-[#3d3d3d]">House Plants</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px] font-normal  text-[#3d3d3d]">Potter Plants</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Seeds</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Small Plants</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Big Plants</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Succulents</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Trerrariums</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Gardening</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                    <div className="flex items-center gap-[110px]">
+                        <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Accessories</label>
+                        <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                    </div>
+                </div>
+
+
+                <div className="mt-[36px]">
+                    <h1 className="text-[18px] text-[#3d3d3d] font-bold ml-[20px]">Price Range</h1>
+                    <div className="ml-[30px]">
+                        <Slider className="w-[209px]" range defaultValue={[20, 50]} disabled={disabled} />
+                    </div>
+                    <h3 className="text-[15px] text-[#3d3d3d] font-normal ml-[30px]">Price: <span className="text-[15px] font-bold text-[#46a358]">$39 - $1230</span></h3>
+                    <button className="bg-[#46a358] text-[#fff] text-[16px] font-bold rounded-[6px] w-[90px] h-[35px] ml-[30px] mt-[16px]">Filter</button>
+                </div>
+
+                <div className="mt-[46px]">
+                    <h1 className="font-bold text-[18px] text-[#3d3d3d] ml-[20px]">Size</h1>
+                    <div className="ml-[30px] flex flex-col gap-[14px] mt-[20px]">
+                        <div className="flex items-center gap-[110px]">
+                            <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Small</label>
+                            <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                        </div>
+                        <div className="flex items-center gap-[110px]">
+                            <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Medium</label>
+                            <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                        </div>
+                        <div className="flex items-center gap-[110px]">
+                            <label className="w-[100px] text-[15px]  font-normal text-[#3d3d3d]">Large</label>
+                            <label className="text-[15px] font-normal text-[#3d3d3d]">(33)</label>
+                        </div>
+                    </div>
+                </div>
+                <div className="mt-[50px]">
+                    <Sales />
+                </div>
+            </div>
+
+
+            <div className="w-[880px] h-[1190px]">
+                <div className="w-[838px] h-[23px] flex justify-between items-center">
+                    <Anchor
+                        direction="horizontal"
+
+                        items={[
+                            {
+                                key: 'All-Plants',
+                                href: '#part-1',
+                                title: 'All Plants',
+                            },
+                            {
+                                key: 'New-Arrivals',
+                                href: '#part-2',
+                                title: 'New Arrivals',
+                            },
+                            {
+                                key: 'Sale',
+                                href: '#part-3',
+                                title: 'Sale',
+                            },
+                        ]}
+                    />
+                    <div className="flex items-center gap-2">
+                        <h4>sort by:</h4>
+                        <Dropdown menu={{ items }}>
+                            <a onClick={(e) => e.preventDefault()}>
+                                <Space>
+                                    Default sorting
+                                    <DownOutlined />
+                                </Space>
+                            </a>
+                        </Dropdown>
+                    </div>
+                </div>
+                <div className="flex flex-col gap-[60px] mt-[15px]">
+                    <div className="flex gap-[50px]">
+                        <ProductCart />
+                        <ProductCart />
+                        <ProductCart />
+                    </div>
+                    <div className="flex gap-[50px]">
+                        <ProductCart />
+                        <ProductCart />
+                        <ProductCart />
+                    </div>
+                    <div className="flex gap-[50px]">
+                        <ProductCart />
+                        <ProductCart />
+                        <ProductCart />
+                    </div>
+                    <div className="ml-[580px]">
+                        <Pagination defaultCurrent={1} total={50} />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Service;
