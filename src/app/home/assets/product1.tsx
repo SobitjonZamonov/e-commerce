@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 
-const ProductCart = () => {
+const ProductCart1 = () => {
     return (
         <div className="w-[250px] h-[340px]">
             <Image src="/product1.png" alt="Product1" width={250} height={250} />
@@ -15,4 +15,4 @@ const ProductCart = () => {
     )
 }
 
-export default ProductCart;
+export default ProductCart1;

@@ -4,10 +4,6 @@ import BlogCard2 from "../assets/blogCard2";
 import BlogCard3 from "../assets/blogCard3";
 import BlogCard4 from "../assets/blogCard4";
 
-
-
-
-
 const Blog = () => {
     return (
         <div className="flex justify-center mt-[138px]">

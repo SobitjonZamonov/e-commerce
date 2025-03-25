@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 const Browse = () => {
     return (
         <div className="w-full flex justify-center gap-[28px] mt-[146px]">
