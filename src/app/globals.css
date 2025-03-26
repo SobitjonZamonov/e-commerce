@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --swiper-pagination-color: #46a358;
 }
 
 @theme inline {
@@ -24,3 +25,51 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.custom-pagination .ant-pagination-item-active {
+  background-color: #46a358 !important;
+  border-color: #46a358 !important;
+}
+
+.custom-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+
+
+
+/* Faol (active) elementni yashil qilish */
+.ant-anchor-link-title-active {
+  color: #46a358 !important; /* Yashil rang */
+}
+
+/* Hover qilganda rangni o'zgartirish */
+.ant-anchor-link:hover .ant-anchor-link-title {
+  color: #3b8f4b !important; /* Quyuqroq yashil */
+}
+
+/* Umumiy `Anchor` rangini yashil qilish */
+.ant-anchor {
+  color: #46a358 !important;
+}
+
+
+.custom-anchor .ant-anchor-link:hover .ant-anchor-link-title {
+  color: #3b8f4b !important;
+}
+
+
+
+/* Slider'ning ichki track (faol qismi) rangini yashil qilish */
+.ant-slider-track {
+  background-color: #46a358 !important;
+}
+
+/* Slider to'plari (thumbs) rangini yashil qilish */
+.ant-slider-handle {
+  border-color: #46a358 !important;
+}
+
+.ant-slider-handle:hover {
+  border-color: #3b8f4b !important; /* Biroz quyuqroq yashil */
+}
+

@@ -62,7 +62,7 @@ const Footer = () => {
                     <Image src="/paymentcards.svg" alt="icon3" width={224} height={26} />
                 </div>
             </div>
-            <div className="absolute top-[3480px]">
+            <div className="fixed top-[3480px]">
                 <label className="text-[14px] font-normal text-[#3d3d3d] text-center">© 2021 GreenShop. All Rights Reserved.</label>
             </div>
         </div>

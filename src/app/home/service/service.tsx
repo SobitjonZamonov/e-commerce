@@ -93,7 +93,7 @@ const Service = () => {
                 <div className="mt-[36px]">
                     <h1 className="text-[18px] text-[#3d3d3d] font-bold ml-[20px]">Price Range</h1>
                     <div className="ml-[30px]">
-                        <Slider className="w-[209px]" range defaultValue={[20, 50]} disabled={disabled} />
+                        <Slider className="custom-slider w-[209px]" range defaultValue={[20, 50]} />
                     </div>
                     <h3 className="text-[15px] text-[#3d3d3d] font-normal ml-[30px]">Price: <span className="text-[15px] font-bold text-[#46a358]">$39 - $1230</span></h3>
                     <button className="bg-[#46a358] text-[#fff] text-[16px] font-bold rounded-[6px] w-[90px] h-[35px] ml-[30px] mt-[16px] cursor-pointer">Filter</button>
@@ -125,26 +125,15 @@ const Service = () => {
             <div className="w-[880px] h-[1190px]">
                 <div className="w-[838px] h-[23px] flex justify-between items-center">
                     <Anchor
+                        className="custom-anchor"
                         direction="horizontal"
-
                         items={[
-                            {
-                                key: 'All-Plants',
-                                href: '#part-1',
-                                title: 'All Plants',
-                            },
-                            {
-                                key: 'New-Arrivals',
-                                href: '#part-2',
-                                title: 'New Arrivals',
-                            },
-                            {
-                                key: 'Sale',
-                                href: '#part-3',
-                                title: 'Sale',
-                            },
+                            { key: "All-Plants", href: "#part-1", title: "All Plants" },
+                            { key: "New-Arrivals", href: "#part-2", title: "New Arrivals" },
+                            { key: "Sale", href: "#part-3", title: "Sale" },
                         ]}
                     />
+
                     <div className="flex items-center gap-2">
                         <h4>sort by:</h4>
                         <Dropdown menu={{ items }}>
@@ -174,7 +163,7 @@ const Service = () => {
                         <ProductCart4 />
                     </div>
                     <div className="ml-[580px]">
-                        <Pagination defaultCurrent={1} total={50} />
+                        <Pagination defaultCurrent={1} total={50} className="custom-pagination" />
                     </div>
                 </div>
             </div>

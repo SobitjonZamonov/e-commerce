@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <div className="flex justify-between items-center w-full h-[53px] px-[120px]">
+        <div className="flex justify-center items-center w-full h-[53px] px-[120px]">
             <div className="w-[1200px] flex justify-between items-center h-[53px] border-b-1 border-[#46A358]">
                 <div className="cursor-pointer">
                     <Image src="/logo.svg" alt="Logo" width={150} height={34} />
