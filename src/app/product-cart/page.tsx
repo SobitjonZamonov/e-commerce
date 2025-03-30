@@ -1,14 +1,14 @@
 import React from "react"
-import Navs from "./navs/navs"
 import InCart from "./incart/incart"
 import Recomends from "./recomends/recomends"
+import Navs1 from "./navs/navs"
 
 
 
 const ProductCart = () => {
     return (
         <>
-            <Navs />
+            <Navs1 />
             <InCart />
             <Recomends />
         </>

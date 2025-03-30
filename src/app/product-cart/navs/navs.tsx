@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Navs = () => {
+const Navs1 = () => {
     return (
         <div className="ml-[360px] mt-[36px]">
             <nav className="flex gap-2">
@@ -15,4 +15,4 @@ const Navs = () => {
     )
 }
 
-export default Navs;
+export default Navs1;

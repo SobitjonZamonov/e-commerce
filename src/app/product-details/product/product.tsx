@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Rate } from "antd";
 import { useState } from "react";
+import Link from "next/link";
 
 const ProductView = () => {
     const [count, setCount] = useState(1)
@@ -45,7 +46,7 @@ const ProductView = () => {
                             <button className="w-[33px] h-[38px] bg-[#46a358] rounded-[29px] text-[#fff] font-normal text-[28px]" onClick={() => setCount(count + 1)}>+</button>
                         </div>
                         <div className="flex gap-[10px]">
-                            <button className="w-[130px] h-[40px] bg-[#46a358] text-[#fff] text-[14px] font-bold uppercase rounded-[6px]">Buy NOW</button>
+                            <Link href={"/product-cart"}><button className="w-[130px] h-[40px] bg-[#46a358] text-[#fff] text-[14px] font-bold uppercase rounded-[6px] cursor-pointer">Buy NOW</button></Link>
                             <button className="border border-[#46a358] rounded-[6px] text-[#46a358] text-[14px] font-bold w-[130px] h-[40]">Add to cart</button>
                             <button className="w-[40px] h-[40px] border border-[#46a358] rounded-[6px] flex justify-center items-center"><Image src="/heart.svg" alt="icon3" width={20} height={20} /></button>
                         </div>
