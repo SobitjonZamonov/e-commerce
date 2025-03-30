@@ -2,18 +2,13 @@
 
 import React, { useState } from "react";
 import { Slider } from 'antd';
-import ProductCart from "../assets/product1";
 import { Anchor } from 'antd';
 import { Pagination } from 'antd';
 import { DownOutlined, SettingOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd'
 import Sales from "../assets/sale";
-import ProductCart1 from "../assets/product1";
-import ProductCart2 from "../assets/product2";
-import ProductCart3 from "../assets/product3";
-import ProductCart4 from "../assets/product4";
-import ProductCart5 from "../assets/product5";
+import ProductCard from "../assets/product1";
 
 const Service = () => {
 
@@ -44,6 +39,16 @@ const Service = () => {
             icon: <SettingOutlined />,
             extra: '⌘S',
         },
+    ];
+
+    const products = [
+        { image: "/product1.png", name: "Barberton Daisy", price: 119.00 },
+        { image: "/product2.png", name: "Angel Wing Begonia", price: 89.00 },
+        { image: "/product3.png", name: "African Violet", price: 75.00 },
+        { image: "/product4.png", name: "Snake Plant", price: 99.00 },
+        { image: "/product5.png", name: "Cactus Plant", price: 45.00 },
+        { image: "/product2.png", name: "Angel Wing Begonia", price: 89.00 },
+        { image: "/product3.png", name: "African Violet", price: 75.00 },
     ];
 
     return (
@@ -147,20 +152,10 @@ const Service = () => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-[60px] mt-[15px]">
-                    <div className="flex gap-[50px]">
-                        <ProductCart1 />
-                        <ProductCart2 />
-                        <ProductCart3 />
-                    </div>
-                    <div className="flex gap-[50px]">
-                        <ProductCart4 />
-                        <ProductCart5 />
-                        <ProductCart1 />
-                    </div>
-                    <div className="flex gap-[50px]">
-                        <ProductCart2 />
-                        <ProductCart3 />
-                        <ProductCart4 />
+                    <div className="grid grid-cols-3 gap-[50px]">
+                        {products.map((product, index) => (
+                            <ProductCard key={index} {...product} />
+                        ))}
                     </div>
                     <div className="ml-[580px]">
                         <Pagination defaultCurrent={1} total={50} className="custom-pagination" />

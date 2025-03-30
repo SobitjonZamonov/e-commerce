@@ -5,7 +5,7 @@ import { Rate } from "antd";
 import { useState } from "react";
 
 const ProductView = () => {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
     return (
         <div className="flex justify-center items-center mt-[43px]">
             <div className="flex gap-[60px]">
@@ -23,7 +23,7 @@ const ProductView = () => {
                     <div className="flex gap-[210px] justify-center items-center mt-[20px] border-b border-[#46a35946]">
                         <label className="font-bold text-[22px] text-[#46a358]">$119.00</label>
                         <div className="flex gap-2">
-                            <Rate />
+                            <Rate defaultValue={4} />
                             <label className="font-normal text-[15px] text-[#3d3d3d]">19 Customer Review</label>
                         </div>
                     </div>
