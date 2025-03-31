@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import DeleteIcon from "../components/deleteicon";
+import Link from "next/link";
 
 const InCart = () => {
     const [count, setCount] = useState(1)
@@ -103,12 +104,12 @@ const InCart = () => {
                         </div>
                     </div>
                     <div className="flex justify-between items-center mb-[30px]">
-                        <label className="font-bold text-[#16px]  text-[#3d3d3d]">Total</label>
+                        <label className="font-bold text-[16px]  text-[#3d3d3d]">Total</label>
                         <label className="font-bold text-[18px] text-[#46a358]">$2,699.00</label>
                     </div>
                     <div className="flex flex-col">
-                        <button className="w-[332px] h-[40px] bg-[#46a358] font-bold text-[15px] text-[#fff] rounded-[3px] cursor-pointer" >Proceed To Checkout</button>
-                        <button className="font-normal text-[15px] text-[#46a458] p-[5px] cursor-pointer">Continue Shopping</button>
+                        <Link href="/product-checkout"><button className="w-[332px] h-[40px] bg-[#46a358] font-bold text-[15px] text-[#fff] rounded-[3px] cursor-pointer" >Proceed To Checkout</button></Link>
+                        <Link href="/home"><button className="font-normal text-[15px] text-[#46a458] p-[5px] cursor-pointer">Continue Shopping</button></Link>
                     </div>
                 </div>
             </div>

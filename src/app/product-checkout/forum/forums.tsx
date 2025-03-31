@@ -128,7 +128,7 @@ const Forums = () => {
                         </div>
                     </div>
                     <div className="flex justify-between items-center mb-[30px] mt-[15px]">
-                        <label className="font-bold text-[#16px]  text-[#3d3d3d]">Total</label>
+                        <label className="font-bold text-[16px]  text-[#3d3d3d]">Total</label>
                         <label className="font-bold text-[18px] text-[#46a358]">$2,699.00</label>
                     </div>
                     <div>
@@ -162,60 +162,107 @@ const Forums = () => {
                 </div>
 
             </div>
-            <Modal open={isModalOpen} onCancel={handleCancel} footer={null} width={450} height={600} className="flex justify-center items-center">
-                <div className="py-5 text-center flex flex-col justify-center items-center">
-                    <h2 className="font-medium text-[20px] text-[#46a358]">Login <span className="font-medium text-[20px] text-[#3d3d3d]"> | Register</span></h2>
-                    <p className="font-normal text-[13px] text-[#3d3d3d] mt-[50px]">Enter your username and password to login.</p>
+            <Modal open={isModalOpen} onCancel={handleCancel} footer={null} width={450} height={600} style={{marginTop: "30px"}} className="flex justify-center items-center">
+                <div className="text-center flex flex-col justify-center items-center">
+                    <Image src="/ckeck.svg" alt="icon3" width={80} height={80} />
+                    <p className="font-normal text-[16px] text-[#727272] py-2.5">Your order has been received</p>
+                    <div className="flex w-[578px] h-[65px] justify-center gap-[30px] items-center border-t border-[#46a35930] border-b">
+                        <div className="flex flex-col border-r border-[#46a35930] pr-[20px]">
+                            <label className="font-normal text-[14px] text-[#727272] text-left">Order Number</label>
+                            <label className="font-bold text-[15px] text-[#727272] text-left">19586687</label>
+                        </div>
 
-                    <div className="mt-[14px] flex flex-col gap-4">
-                        <Input
-                        style={{
-                            width: "300px",
-                            height: "40px"
-                        }}
-                            placeholder="Email"
-                            defaultValue="almamun_uxui@outlook.com"
-                            className="mb-3 p-2"
-                        />
-                        <Input.Password
-                        style={{
-                            width: "300px",
-                            height: "40px",
-                        }}
-                            placeholder="Password"
-                            iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-                            className="mb-2 p-2"
-                        />
-                        <div className="text-right text-green-500 text-sm cursor-pointer mt-[14px]">Forgot Password?</div>
 
-                        <Button type="primary" style={{
-                            width: "300px",
-                            height: "45px",
-                            background: "#46a358",
-                            font: "bold",
-                            color: "#fff",
-                            fontSize: "16px",
-                            marginTop: "30px"
-                        }} block>
-                            Login
-                        </Button>
+                        <div className="flex flex-col border-r border-[#46a35930] pr-[20px]">
+                            <label className="font-normal text-[14px] text-[#727272] text-left">Date</label>
+                            <label className="font-bold text-[15px] text-[#727272] text-left">15 Sep, 2021</label>
+                        </div>
+
+                        <div className="flex flex-col border-r border-[#46a35930] pr-[20px]">
+                            <label className="font-normal text-[14px] text-[#727272] text-left">Total</label>
+                            <label className="font-bold text-[15px] text-[#727272] text-left">2,699.00</label>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <label className="font-normal text-[14px] text-[#727272] text-left">Payment Method</label>
+                            <label className="font-bold text-[15px] text-[#727272] text-left">Cash on delivery</label>
+                        </div>
                     </div>
 
-                    <div className="mt-[50px] text-gray-400 text-sm">--- Or login with ---</div>
+                    <label className="font-bold text-[15px] text-[#3d3d3d] mr-[410px] mt-[20px]">Order Details</label>
+
+                    <div className="flex justify-center border-b border-[#46a35933] py-3 gap-[300px]">
+                        <label className="font-medium text-[16px] text-[#3d3d3d]">Products</label>
+                        <div className="flex gap-[50px]">
+                            <label className="font-medium text-[16px] text-[#3d3d3d]">Qty</label>
+                            <label className="font-medium text-[16px] text-[#3d3d3d]">Subtotal</label>
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-2.5">
+                        <div className="w-[500px] h-[70px] flex justify-center items-center gap-[100px] bg-[#fbfbfb] rounded-[3px]">
+                            <div className="flex justify-center items-center">
+                                <Image src="/pruductdetail1.svg" alt="icon3" width={70} height={70} className="hover:border border-[#46a358]" />
+                                <div className="flex flex-col">
+                                    <h1 className="font-medium text-[16px] text-[#3d3d3d]">Barberton Daisy</h1>
+                                    <label className="font-normal text-[14px] text-[#a5a5a5]">SKU: 1995751877966</label>
+                                </div>
+                            </div>
+                            <label className="font-normal text-[14px] text-[#727272]">(x2)</label>
+                            <label className="font-bold text-[18px] text-[#46a358] text-right">$238.00</label>
+                        </div>
+                        <div className="w-[500px] h-[70px] flex justify-center items-center gap-[100px] bg-[#fbfbfb] rounded-[3px]">
+                            <div className="flex justify-center items-center">
+                                <Image src="/pruductdetail1.svg" alt="icon3" width={70} height={70} className="hover:border border-[#46a358]" />
+                                <div className="flex flex-col">
+                                    <h1 className="font-medium text-[16px] text-[#3d3d3d]">Barberton Daisy</h1>
+                                    <label className="font-normal text-[14px] text-[#a5a5a5]">SKU: 1995751877966</label>
+                                </div>
+                            </div>
+                            <label className="font-normal text-[14px] text-[#727272]">(x2)</label>
+                            <label className="font-bold text-[18px] text-[#46a358] text-right">$238.00</label>
+                        </div>
+
+                        <div className="w-[500px] h-[70px] flex justify-center items-center gap-[100px] bg-[#fbfbfb] rounded-[3px]">
+                            <div className="flex justify-center items-center">
+                                <Image src="/pruductdetail1.svg" alt="icon3" width={70} height={70} className="hover:border border-[#46a358]" />
+                                <div className="flex flex-col">
+                                    <h1 className="font-medium text-[16px] text-[#3d3d3d]">Barberton Daisy</h1>
+                                    <label className="font-normal text-[14px] text-[#a5a5a5]">SKU: 1995751877966</label>
+                                </div>
+                            </div>
+                            <label className="font-normal text-[14px] text-[#727272]">(x2)</label>
+                            <label className="font-bold text-[18px] text-[#46a358] text-right">$238.00</label>
+                        </div>
+                    </div>
+                    <div className="ml-[180px] mt-[20px]">
+                        <div className="flex justify-between items-center gap-[200px]">
+                            <label className="font-normal text-[15px] text-[#3d3d3d]">Shiping</label>
+                            <label className="font-medium text-[18px] text-[#3d3d3d]">$16.00</label>
+                        </div>
+                        <div className="flex justify-between items-center py-3 gap-[200px]">
+                            <label className="font-bold text-[16px]  text-[#3d3d3d]">Total</label>
+                            <label className="font-bold text-[18px] text-[#46a358]">$2,699.00</label>
+                        </div>
+                    </div>
+
+
+                    <p className="text-center font-normal text-[14px] text-[#727272] border-t border-[#46a3593d] py-3">
+                        Your order is currently being processed. You will receive an order confirmation email shortly
+                        with the expected delivery date for your items.
+                    </p>
 
                     <div className="mt-[30px]">
-                        <Button block icon={<GoogleOutlined />} style={{
-                            width: "300px",
-                            height: "40px"
-                        }} className="border-gray-300 text-gray-700 flex items-center justify-center mb-2 h-10">
-                            Login with Google
+                        <Button style={{
+                            width: "162px",
+                            height: "45px",
+                            background: "#46a358",
+                            color: "#fff",
+                            font: "bold",
+                            fontSize: "16px"
+                        }} className="flex items-center justify-center">
+                            Track your order
                         </Button>
-                        <Button block icon={<FacebookOutlined />} style={{
-                            width: "300px",
-                            height: "40px"
-                        }} className="border-gray-300 text-gray-700 flex items-center justify-center h-10">
-                            Login with Facebook
-                        </Button>
+    
                     </div>
                 </div>
             </Modal>
